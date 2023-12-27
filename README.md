@@ -483,6 +483,7 @@ Warning, if you make a typo, you'll have to start over:
 
 ```
 node
+
 require('dotenv').config()   // Necessary if connection string in a .env file
 
 require('./config/database')
