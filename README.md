@@ -144,14 +144,14 @@ Then, in our controller actions, we can require the `Cat` model and use it to pe
 // variable as singular and UpperCamelCased
 const Cat = require('./models/cat');
 
-Cat.create({ name: 'Morris', breed: 'Orange Tabby' })
-  .then(catDoc => {
-    console.log(catDoc);
-  })
-  .catch(err => {
-    console.error(err);
-  });
+const Cat = require('./models/cat');
 
+try {
+  const catDoc = await Cat.create({ name: 'Morris', breed: 'Orange Tabby' });
+  console.log(catDoc);
+} catch (err) {
+  console.error(err);
+}
 ```
 
 ### ❓ Review Questions
