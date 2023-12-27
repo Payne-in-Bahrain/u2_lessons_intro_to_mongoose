@@ -483,17 +483,20 @@ Warning, if you make a typo, you'll have to start over:
 
 ```
 node
-> require('dotenv').config()   // Necessary if connection string in a .env file
-> require('./config/database')
-> const Movie = require('./models/movie')
-> Movie.create({
-... title: 'Star Wars - A New Hope',
-... releaseYear: 1977
-... }).then((doc) => {
-... console.log(doc);
-... }).catch((err) => {
-... console.error(err);
-...})
+require('dotenv').config()   // Necessary if connection string in a .env file
+
+require('./config/database')
+
+const Movie = require('./models/movie')
+
+Movie.create({
+  title: 'Star Wars - A New Hope',
+  releaseYear: 1977
+}).then((doc) => {
+  console.log(doc);
+}).catch((err) => {
+  console.error(err);
+});
 ```
 
 Logged out will be a document that looks something like...
