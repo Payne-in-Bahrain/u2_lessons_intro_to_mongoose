@@ -91,7 +91,7 @@ Yes, this guy, but not in the context of MongoDB...
 
 Mongoose is the goto when performing CRUD data operations on a MongoDB database.
 
-Using Mongoose is easier and more productive than working directly MongoDB.
+Using Mongoose is easier and more productive than working directly with MongoDB.
 
 As stated on Mongoose's homepage:
 
