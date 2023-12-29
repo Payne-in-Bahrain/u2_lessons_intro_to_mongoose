@@ -768,6 +768,14 @@ async function create(req, res) {
 
 ```
 
+The following line of code `if (req.body.cast) req.body.cast = req.body.cast.split(/\s*,\s*/);` uses something called a regular expression.  
+
+Regular expressions (regex or regexp) are patterns used for matching character combinations in strings. They are a powerful tool for string manipulation and searching.  We won't touch on them in-depth, but let's look at what the above regex pattern `/\s*,\s*/` is doing. 
+
+`\s*,\s*` is a regular expression that matches zero or more whitespace characters `\s*` followed by a comma `,`, and then zero or more whitespace characters again `\s*`. This pattern is designed to split a string around commas while accounting for potential whitespace before or after the commas.
+
+For a great tool to help you understand regular expressions, check out the website [Regexr.com](https://regexr.com/).
+
 #### Step 5 -  Redirect
 
 We've already coded the `redirect` above and have no view to code.
