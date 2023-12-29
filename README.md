@@ -624,8 +624,8 @@ module.exports = router;
 3. Stub up the `newMovie` function:
 
 	```js
-	function newMovie(req, res) {
-	  
+	const newMovie = (req, res) => {
+    		// render the new template 
 	}
 	```
 
@@ -634,8 +634,8 @@ module.exports = router;
 There's no CRUD to perform in this `new` action, we just need to render a **new.ejs**:
 
 ```js
-function newMovie(req, res) {
-  res.render('movies/new');
+const newMovie = (req, res) => {
+	res.render('movies/new');
 }
 ```
 
