@@ -747,7 +747,10 @@ Now let's write the code that will use the `Movie` Model to create the movie sub
 ```js
 async function create(req, res) {
     try {
-        // convert nowShowing's checkbox of nothing or "on" to boolean
+        
+         //In this code, the double negation (!!) is used to convert the value of req.body.nowShowing 
+        //to a boolean. The reason for this is that HTML forms, when submitting a checked checkbox, 
+        //send the value as the string "on." By using !!, it's converted to a boolean value:
         req.body.nowShowing = !!req.body.nowShowing;
         // remove any whitespace at start and end of cast
         req.body.cast = req.body.cast.trim();
@@ -762,6 +765,7 @@ async function create(req, res) {
         res.redirect('/movies/new');
       }
   }
+
 ```
 
 #### Step 5 -  Redirect
