@@ -762,6 +762,7 @@ async function create(req, res) {
         // for now, redirect right back to new.ejs
         res.redirect('/movies/new');
       } catch (err) {
+        console.error(err);
         res.redirect('/movies/new');
       }
   }
