@@ -745,7 +745,7 @@ const Movie = require('../models/movie');
 Now let's write the code that will use the `Movie` Model to create the movie submitted by the form - we'll review it as we type it...
 
 ```js
-async function create(req, res) {
+const create = async(req, res) => {
     try {
         
          //In this code, the double negation (!!) is used to convert the value of req.body.nowShowing 
@@ -765,8 +765,7 @@ async function create(req, res) {
         console.error(err);
         res.redirect('/movies/new');
       }
-  }
-
+}
 ```
 
 The following line of code `if (req.body.cast) req.body.cast = req.body.cast.split(/\s*,\s*/);` uses something called a regular expression.  
