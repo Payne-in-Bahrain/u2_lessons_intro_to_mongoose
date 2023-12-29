@@ -760,7 +760,7 @@ async function create(req, res) {
         await movie.save();
         console.log(movie);
         // for now, redirect right back to new.ejs
-        res.redirect('/movies/index');
+        res.redirect('/movies/new');
       } catch (err) {
         res.redirect('/movies/new');
       }
