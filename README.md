@@ -884,16 +884,9 @@ Now a quick refactor...
 Now that we have an `index` view, let's update the `redirect` in the `create` action:
 
 ```js
-movie.save()
-  .then((savedMovie) => {
-    console.log(savedMovie);
-    res.redirect('/movies'); // update this line
-  })
-  .catch((err) => {
-    console.error(err);
-    res.redirect('/movies/new');
-  });
-
+ await movie.save();
+console.log(movie);
+res.redirect('/movies');
 ```
 
 **Congrats on implementing `new` and `create` functionality!**
