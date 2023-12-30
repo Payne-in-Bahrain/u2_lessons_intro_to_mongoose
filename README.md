@@ -884,7 +884,7 @@ Now a quick refactor...
 Now that we have an `index` view, let's update the `redirect` in the `create` action:
 
 ```js
- await movie.save();
+await movie.save();
 console.log(movie);
 res.redirect('/movies');
 ```
