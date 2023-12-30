@@ -1020,15 +1020,7 @@ Now, if we try saving a movie without a `title` a validation error will occur an
 Looking at the `create` action, this error will result in the `new.ejs` view being rendered instead of redirecting to the movies list:
 
 ```js
-movie.save()
-  .then(() => {
-    // handle success
-  })
-  .catch((err) => {
-    // handle error
-    res.redirect('/movies/new');
-  });
-
+res.redirect('/movies');
 ```
 
 For properties that are of type _Number_, we can specify a `min` and `max` value:
